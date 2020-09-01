@@ -6,11 +6,11 @@ python create_data_config.py \
  --coco-json-path $train_json_instance
 
 python main.py --mode=train \
-    --training_file_pattern=gs://tfrecords_and_logs/experiments/img_clf_approach/tfrecord_efficientdet/train*.tfrecord \
+    --training_file_pattern=gs://tfrecords_and_logs/experiments/img_clf_approach/tfrecord_obj_neutro_lymph_plate/train*.tfrecord \
     --model_name=efficientdet-d0 \
-    --model_dir=gs://tfrecords_and_logs/experiments/img_clf_approach/logs/efficientdet_ckpt_0/  \
+    --model_dir=gs://tfrecords_and_logs/experiments/img_clf_approach/logs/efficientdet_neutro_lymph_plate/  \
     --ckpt=gs://tfrecords_and_logs/experiments/img_clf_approach/logs/efficientdet_ckpt/  \
     --train_batch_size=8 \
     --num_epochs=10 \
-    --num_examples_per_epoch=200 \
+    --num_examples_per_epoch=7985 \
     --hparams=cell_config.yaml
