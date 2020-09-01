@@ -19,7 +19,7 @@ def get_args():
           type=str,
           required=True,
           help='coco_json_path - filtered json or single label json')
-    return args_parser.parse_args()
+    return parser.parse_args()
 
 def create_config(project_name, coco_json_path):
     file_system = gcsfs.GCSFileSystem(project=project_name)
