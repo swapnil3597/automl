@@ -1,6 +1,16 @@
+project_name="qp-medanta-2020-05"
+train_json_instance="gs://tfrecords_and_logs/experiments/img_clf_approach/jsons/neutro_lymph_plate.json"
+
+python create_data_config.py \
+ --project-name $project_name \
+ --coco-json-path $train_json_instance
+
 python main.py --mode=train \
     --training_file_pattern=gs://tfrecords_and_logs/experiments/img_clf_approach/tfrecord_efficientdet/train*.tfrecord \
     --model_name=efficientdet-d0 \
-    --model_dir=gs://tfrecords_and_logs/experiments/img_clf_approach/logs/efficientdet/  \
-    --train_batch_size=64 \
-    --num_epochs=1  \
+    --model_dir=gs://tfrecords_and_logs/experiments/img_clf_approach/logs/efficientdet_ckpt_0/  \
+    --ckpt=gs://tfrecords_and_logs/experiments/img_clf_approach/logs/efficientdet_ckpt/  \
+    --train_batch_size=8 \
+    --num_epochs=10 \
+    --num_examples_per_epoch=200 \
+    --hparams=cell_config.yaml
