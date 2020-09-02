@@ -1,3 +1,5 @@
+import os
+import pathlib
 import json
 import argparse
 import gcsfs
@@ -22,12 +24,14 @@ def get_args():
     return parser.parse_args()
 
 def create_config(project_name, coco_json_path):
+    config_path = str(pathlib.Path(__file__).parent.absolute()) + '/cell_config.yaml'
+    print("config created at path:", config_path)
     file_system = gcsfs.GCSFileSystem(project=project_name)
     with file_system.open(coco_json_path, 'r') as f:
         coco_json = json.load(f)
     config = {}
     label_map = {category['id']: category['name'] for category in coco_json['categories']}
-    with open('cell_config.yaml', 'w') as outfile:
+    with open(config_path, 'w') as outfile:
         outfile.write('num_classes: '+str(len(coco_json['categories']))+'\n')
         outfile.write('label_map: '+str(label_map))
 

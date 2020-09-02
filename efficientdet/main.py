@@ -14,6 +14,11 @@
 # ==============================================================================
 """The main training script."""
 import os
+import pathlib
+import sys
+# os.chdir(str(pathlib.Path(__file__).parent.absolute())+'/')
+sys.path.append(str(pathlib.Path(__file__).parent.absolute()))
+
 import multiprocessing
 from functools import partial
 from absl import app
