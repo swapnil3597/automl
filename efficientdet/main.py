@@ -16,7 +16,7 @@
 import os
 import pathlib
 import sys
-# os.chdir(str(pathlib.Path(__file__).parent.absolute())+'/')
+os.chdir(str(pathlib.Path(__file__).parent.absolute())+'/')
 sys.path.append(str(pathlib.Path(__file__).parent.absolute()))
 
 import multiprocessing
