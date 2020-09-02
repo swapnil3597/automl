@@ -2,6 +2,10 @@
     Package dependencies and versions
 """
 import setuptools
+import os
+
+os.system('pip3 install git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI')
+
 
 NAME = 'trainer'
 VERSION = '1.0'
@@ -14,8 +18,7 @@ REQUIRED_PACKAGES = [
     'six>=1.12.0',
     'tensorflow-gpu>=2.1.0',
     'tensorflow-addons>=0.9.1',
-    'tensorflow-probability>=0.9.0',
-    'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
+    'tensorflow-probability>=0.9.0'
 ]
 
 setuptools.setup(
