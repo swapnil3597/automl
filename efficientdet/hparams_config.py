@@ -185,13 +185,13 @@ def default_detection_configs():
 
   # dataset specific parameters
   # TODO(tanmingxing): update this to be 91 for COCO, and 21 for pascal.
-  h.num_classes = 4  # 1+ actual classes, 0 is reserved for background.
+  h.num_classes = 6  # 1+ actual classes, 0 is reserved for background.
   h.seg_num_classes = 3  # segmentation classes
   h.heads = ['object_detection']  # 'object_detection', 'segmentation'
 
   h.skip_crowd_during_training = True
-  h.label_map = {1: "Neutrophil", 2: "Normal Lymphocyte", 3: "Normal Platelet"}  # a dict or a string of 'coco'/'voc'.
-  h.max_instances_per_image = 100  # Default to 100 for COCO.
+  h.label_map = {1: "Neutrophil", 2: "Normal Lymphocyte", 3: "Normal Platelet", 4:"Large granular lymphocyte", 5:"Monoctye"}  # a dict or a string of 'coco'/'voc'.
+  h.max_instances_per_image = 30  # Default to 100 for COCO.
   h.regenerate_source_id = False
 
   # model architecture
