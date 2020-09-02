@@ -17,7 +17,7 @@ from absl import app
 from absl import logging
 import tensorflow as tf
 import tensorflow_datasets as tfds
-from keras import efficientdet_keras
+from keras_repo import efficientdet_keras
 
 
 def create_mask(pred_mask):

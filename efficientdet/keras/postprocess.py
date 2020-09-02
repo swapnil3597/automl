@@ -18,7 +18,7 @@ from absl import logging
 import tensorflow as tf
 
 import utils
-from keras import anchors
+from keras_repo import anchors
 T = tf.Tensor  # a shortcut for typing check.
 CLASS_OFFSET = 1
 

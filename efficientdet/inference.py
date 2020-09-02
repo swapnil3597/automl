@@ -27,9 +27,9 @@ import dataloader
 import det_model_fn
 import hparams_config
 import utils
-from keras import efficientdet_keras
-from keras import label_util
-from keras import postprocess
+from keras_repo import efficientdet_keras
+from keras_repo import label_util
+from keras_repo import postprocess
 from visualize import vis_utils
 from tensorflow.python.client import timeline  # pylint: disable=g-direct-tensorflow-import
 

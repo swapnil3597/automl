@@ -16,7 +16,7 @@
 from absl import logging
 import tensorflow as tf
 
-from keras import postprocess
+from keras_repo import postprocess
 
 
 class PostprocessTest(tf.test.TestCase):

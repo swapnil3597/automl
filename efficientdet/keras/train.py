@@ -22,7 +22,7 @@ import tensorflow as tf
 import dataloader
 import hparams_config
 import utils
-from keras import train_lib
+from keras_repo import train_lib
 
 # Cloud TPU Cluster Resolvers
 flags.DEFINE_string(

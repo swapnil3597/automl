@@ -15,7 +15,7 @@
 """Tests for fpn_configs."""
 from absl import logging
 import tensorflow as tf
-from keras import fpn_configs
+from keras_repo import fpn_configs
 
 
 class FpnConfigTest(tf.test.TestCase):

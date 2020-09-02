@@ -16,7 +16,7 @@
 from absl import logging
 import tensorflow as tf
 
-from keras import wbf
+from keras_repo import wbf
 
 
 class WbfTest(tf.test.TestCase):

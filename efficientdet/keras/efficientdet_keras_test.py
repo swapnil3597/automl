@@ -20,7 +20,7 @@ import tensorflow.compat.v1 as tf
 
 import efficientdet_arch as legacy_arch
 import hparams_config
-from keras import efficientdet_keras
+from keras_repo import efficientdet_keras
 
 SEED = 111111
 

@@ -25,9 +25,9 @@ import hparams_config
 import iou_utils
 import nms_np
 import utils
-from keras import anchors
-from keras import efficientdet_keras
-from keras import postprocess
+from keras_repo import anchors
+from keras_repo import efficientdet_keras
+from keras_repo import postprocess
 
 _DEFAULT_BATCH_SIZE = 64
 

@@ -24,8 +24,8 @@ import tensorflow as tf
 import inference
 import iou_utils
 import utils
-from keras import anchors
-from keras import efficientdet_keras
+from keras_repo import anchors
+from keras_repo import efficientdet_keras
 
 
 def update_learning_rate_schedule_parameters(params):
