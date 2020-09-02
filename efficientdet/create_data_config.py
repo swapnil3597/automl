@@ -32,7 +32,7 @@ def create_config(project_name, coco_json_path):
     config = {}
     label_map = {category['id']: category['name'] for category in coco_json['categories']}
     with open(config_path, 'w') as outfile:
-        outfile.write('num_classes: '+str(len(coco_json['categories']))+'\n')
+        outfile.write('num_classes: '+str(len(coco_json['categories'])+1)+'\n')
         outfile.write('label_map: '+str(label_map))
 
 def main():
