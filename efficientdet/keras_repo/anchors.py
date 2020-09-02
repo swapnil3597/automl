@@ -144,7 +144,7 @@ class Anchors():
 class AnchorLabeler(object):
   """Labeler for multiscale anchor boxes."""
 
-  def __init__(self, anchors, num_classes, match_threshold=0.5):
+  def __init__(self, anchors, num_classes, match_threshold=0.9):
     """Constructs anchor labeler to assign labels to anchors.
 
     Args:
