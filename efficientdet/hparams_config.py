@@ -185,12 +185,12 @@ def default_detection_configs():
 
   # dataset specific parameters
   # TODO(tanmingxing): update this to be 91 for COCO, and 21 for pascal.
-  h.num_classes = 90  # 1+ actual classes, 0 is reserved for background.
+  h.num_classes = 4  # 1+ actual classes, 0 is reserved for background.
   h.seg_num_classes = 3  # segmentation classes
   h.heads = ['object_detection']  # 'object_detection', 'segmentation'
 
   h.skip_crowd_during_training = True
-  h.label_map = 'coco'  # a dict or a string of 'coco'/'voc'.
+  h.label_map = {1: "Neutrophil", 2: "Normal Lymphocyte", 3: "Normal Platelet"}  # a dict or a string of 'coco'/'voc'.
   h.max_instances_per_image = 100  # Default to 100 for COCO.
   h.regenerate_source_id = False
 
@@ -247,8 +247,8 @@ def default_detection_configs():
   # For post-processing nms, must be a dict.
   h.nms_configs = {
       'method': 'gaussian',
-      'iou_thresh': None,  # use the default value based on method.
-      'score_thresh': None,
+      'iou_thresh': 0.9,  # use the default value based on method.
+      'score_thresh': 0.9,
       'sigma': None,
       'max_nms_inputs': 0,
       'max_output_size': 100,
