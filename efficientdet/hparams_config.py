@@ -172,7 +172,7 @@ def default_detection_configs():
   h.act_type = 'swish'
 
   # input preprocessing parameters
-  h.image_size = 640  # An integer or a string WxH such as 640x320.
+  h.image_size = 640  # An integer or a string WxH such as 640x320. # TODO
   h.target_size = None
   h.input_rand_hflip = True
   h.jitter_min = 0.1
@@ -185,11 +185,12 @@ def default_detection_configs():
 
   # dataset specific parameters
   # TODO(tanmingxing): update this to be 91 for COCO, and 21 for pascal.
-  h.num_classes = 6  # 1+ actual classes, 0 is reserved for background.
+  h.num_classes = 6  # 1+ actual classes, 0 is reserved for background. # TODO
   h.seg_num_classes = 3  # segmentation classes
   h.heads = ['object_detection']  # 'object_detection', 'segmentation'
 
   h.skip_crowd_during_training = True
+  # TODO
   h.label_map = {1: "Neutrophil", 2: "Normal Lymphocyte", 3: "Normal Platelet", 4:"Large granular lymphocyte", 5:"Monoctye"}  # a dict or a string of 'coco'/'voc'.
   h.max_instances_per_image = 30  # Default to 100 for COCO.
   h.regenerate_source_id = False
