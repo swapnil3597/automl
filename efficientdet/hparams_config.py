@@ -172,7 +172,7 @@ def default_detection_configs():
   h.act_type = 'swish'
 
   # input preprocessing parameters
-  h.image_size = 640  # An integer or a string WxH such as 640x320. # TODO
+  h.image_size = 256  # An integer or a string WxH such as 640x320. # TODO
   h.target_size = None
   h.input_rand_hflip = True
   h.jitter_min = 0.1
@@ -248,8 +248,8 @@ def default_detection_configs():
   # For post-processing nms, must be a dict.
   h.nms_configs = {
       'method': 'gaussian',
-      'iou_thresh': 0.9,  # use the default value based on method.
-      'score_thresh': 0.9,
+      'iou_thresh': None,  # use the default value based on method.
+      'score_thresh': None,
       'sigma': None,
       'max_nms_inputs': 0,
       'max_output_size': 100,
